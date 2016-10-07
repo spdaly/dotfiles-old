@@ -16,7 +16,6 @@ create_symlinks() {
         "shell/bash_logout"
         "shell/bash_options"
         "shell/bash_profile"
-        "shell/bash_prompt"
         "shell/bashrc"
         "shell/curlrc"
         "shell/inputrc"
