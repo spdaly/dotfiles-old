@@ -18,6 +18,8 @@ create_symlinks() {
         "shell/bash_profile"
         "shell/bashrc"
         "shell/curlrc"
+        "shell/editorconfig"
+        "shell/hushlogin"
         "shell/inputrc"
         "shell/screenrc"
         "shell/tmux.conf"
