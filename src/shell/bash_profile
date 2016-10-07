@@ -50,6 +50,7 @@ source_bash_files() {
 source_bash_files
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-[[ $- = *i* ]] && source ../liquidprompt/liquidprompt
+DIR=$( pwd )
+[[ $- = *i* ]] && source $DIR/projects/dotfiles/src/liquidprompt/liquidprompt
 
 unset -f source_bash_files
