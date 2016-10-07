@@ -38,8 +38,8 @@ execute "defaults write com.apple.screensaver askForPassword -int 1 && \
 execute "defaults write NSGlobalDomain AppleFontSmoothing -int 2" \
     "Enable subpixel font rendering on non-Apple LCDs"
 
-execute "defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'" \
-    "Always show scrollbars"
+execute "defaults write NSGlobalDomain AppleShowScrollBars -string 'WhenScrolling'" \
+    "Show scrollbars while scrolling"
 
 execute "defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true" \
     "Disable automatic termination of inactive apps"
@@ -47,8 +47,8 @@ execute "defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true"
 execute "defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true" \
     "Expand save panel by default"
 
-execute "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2" \
-    "Set sidebar icon size to medium"
+execute "defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1" \
+    "Set sidebar icon size to small"
 
 execute "defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false" \
     "Disable the over-the-top focus ring animation"
@@ -59,31 +59,24 @@ execute "defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bo
 execute "defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true" \
     "Expand print panel by default"
 
-execute "sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'Laptop' && \
-         sudo scutil --set ComputerName 'laptop' && \
-         sudo scutil --set HostName 'laptop' && \
-         sudo scutil --set LocalHostName 'laptop'" \
+execute "sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string 'steve' && \
+         sudo scutil --set ComputerName 'steve' && \
+         sudo scutil --set HostName 'steve' && \
+         sudo scutil --set LocalHostName 'steve'" \
     "Set computer name"
 
 execute "sudo systemsetup -setrestartfreeze on" \
     "Restart automatically if the computer freezes"
 
-execute "sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist ControllerPowerState 0 && \
+execute "sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist ControllerPowerState -int 1 && \
          sudo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist && \
          sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist" \
-    "Turn Bluetooth off"
+    "Turn Bluetooth on"
 
-execute "for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-            sudo defaults write \"\${domain}\" dontAutoLoad -array \
-                '/System/Library/CoreServices/Menu Extras/TimeMachine.menu' \
-                '/System/Library/CoreServices/Menu Extras/Volume.menu'
-         done \
-            && sudo defaults write com.apple.systemuiserver menuExtras -array \
-                '/System/Library/CoreServices/Menu Extras/Bluetooth.menu' \
-                '/System/Library/CoreServices/Menu Extras/AirPort.menu' \
-                '/System/Library/CoreServices/Menu Extras/Battery.menu' \
-                '/System/Library/CoreServices/Menu Extras/Clock.menu'
-        " \
-    "Hide Time Machine and Volume icons from the menu bar"
+execute "sudo pmset -a standbydelay 86400" \
+    "Set standby delay to 24 hours (default is 1 hour)"
+
+execute "sudo nvram SystemAudioVolume=' '" \
+    "Disable the sound effects on boot"
 
 killall "SystemUIServer" &> /dev/null

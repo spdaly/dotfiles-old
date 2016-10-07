@@ -24,6 +24,11 @@ main() {
     printf "\n"
     install_npm_package "Babel" "babel-cli"
     install_npm_package "JSHint" "jshint"
+    install_npm_package "Git Open" "git-open"
+    install_npm_package "Git Recent" "git-recent"
+    install_npm_package "Fancy Diff" "diff-so-fancy"
+    install_npm_package "Trash CLI" "trash-cli"
+    
 
 }
 

@@ -19,7 +19,11 @@ alias map="xargs -n1"
 alias n="npm"
 alias q="exit"
 alias rm="rm -rf --"
-
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias p="cd ~/projects"
+alias h="history"
+alias j="jobs"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Load OS specific aliases.

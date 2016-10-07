@@ -19,8 +19,8 @@ execute "defaults write NSGlobalDomain 'InitialKeyRepeat_Level_Saved' -int 10" \
 execute "defaults write NSGlobalDomain KeyRepeat -int 1" \
     "Set the key repeat rate to fast"
 
-execute "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false" \
-    "Disable smart quotes"
+execute "defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool true" \
+    "Enable smart quotes"
 
-execute "defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false" \
-    "Disable smart dashes"
+execute "defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool true" \
+    "Enable smart dashes"
