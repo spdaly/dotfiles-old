@@ -21,6 +21,7 @@ create_symlinks() {
         "shell/editorconfig"
         "shell/hushlogin"
         "shell/inputrc"
+        "shell/liquidprompt"
         "shell/screenrc"
         "shell/tmux.conf"
 
