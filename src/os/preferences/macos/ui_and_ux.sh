@@ -76,7 +76,4 @@ execute "sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist Cont
 execute "sudo pmset -a standbydelay 86400" \
     "Set standby delay to 24 hours (default is 1 hour)"
 
-execute "sudo nvram SystemAudioVolume=' '" \
-    "Disable the sound effects on boot"
-
 killall "SystemUIServer" &> /dev/null
