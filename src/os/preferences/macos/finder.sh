@@ -27,6 +27,7 @@ execute "defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'" \
 execute "defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false" \
     "Disable warning when changing a file extension"
 
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 execute "defaults write com.apple.finder FXPreferredViewStyle -string 'Nlsv'" \
     "Use list view in all Finder windows by default"
 
@@ -43,7 +44,7 @@ execute "defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool f
 execute "defaults write com.apple.finder ShowRecentTags -bool false" \
     "Do not show recent tags"
 
-execute "defaults write NSGlobalDomain AppleShowAllExtensions -bool true" \
+execute "defaults write NSGlobalDomain AppleShowAllExtensions -bool false" \
     "Show all filename extensions"
 
 execute "/usr/libexec/PlistBuddy -c 'Set :DesktopViewSettings:IconViewSettings:iconSize 32' ~/Library/Preferences/com.apple.finder.plist && \
@@ -78,6 +79,33 @@ execute "defaults write com.apple.finder AppleShowAllFiles -bool true" \
 
 execute "defaults write com.apple.finder CreateDesktop -bool false" \
     "Hide desktop icons"
+
+execute "defaults write com.apple.finder ShowStatusBar -bool true" \
+    "Show status bar"
+
+execute "defaults write com.apple.finder ShowPathbar -bool true" \
+    "Show path bar"
+
+execute "defaults write com.apple.finder _FXSortFoldersFirst -bool true" \
+    "Keep folders on top when sorting by name"
+
+execute "defaults write NSGlobalDomain com.apple.springing.enabled -bool true" \
+    "Enable spring loading for directories"
+
+execute "defaults write NSGlobalDomain com.apple.springing.delay -float 0" \
+    "Remove the spring loading delay for directories"
+
+execute "defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true" \
+    "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
+
+execute "chflags nohidden ~/Library" \
+    "Show the ~/Library folder"
+
+execute "sudo chflags nohidden /Volumes"  \
+    "Show the /Volumes folder"
+
+execute "defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true" \
+    "Expand the following File Info panes: General, Open with, and Sharing & Permissions"
 
 killall "Finder" &> /dev/null
 

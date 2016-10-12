@@ -30,4 +30,10 @@ execute "defaults write org.m0k.transmission WarningDonate -bool false" \
 execute "defaults write org.m0k.transmission WarningLegal -bool false" \
     "Hide the legal disclaimer"
 
+# Source: https://giuliomac.wordpress.com/2014/02/19/best-blocklist-for-transmission/
+execute "defaults write org.m0k.transmission BlocklistNew -bool true && \
+    defaults write org.m0k.transmission BlocklistURL -string 'http://john.bitsurge.net/public/biglist.p2p.gz' && \
+    defaults write org.m0k.transmission BlocklistAutoUpdate -bool true" \
+    "Set IP block list"
+
 killall "Transmission" &> /dev/null
