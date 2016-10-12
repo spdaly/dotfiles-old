@@ -472,7 +472,7 @@
   # this cleaning will facilite a rebase, because there won't be any conlfict
   # due to an "unclean" working directory (not in sync with the index).
   # The unwip will restore the deleted files to the working tree.
-  wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"wip\""
+  wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"WIP\""
   unwip = !"git log -n 1 | grep -q -c wip && git reset HEAD~1"
 
   # Assume: from http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
