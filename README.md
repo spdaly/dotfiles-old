@@ -46,7 +46,7 @@ Setup process in action:
     <tbody>
         <tr>
             <td>
-                <img src="https://cloud.githubusercontent.com/assets/1223565/11821505/91e437be-a372-11e5-9500-025c316fe22c.gif" alt="Setup process on macOS" width="100%">
+                <img src="https://cloud.githubusercontent.com/assets/1223565/19314446/cd89a592-90a2-11e6-948d-9d75247088ba.gif" alt="Setup process on Ubuntu" width="100%">
             </td>
             <td>
                 <img src="https://cloud.githubusercontent.com/assets/1223565/19048636/e23e347a-89af-11e6-853c-98616b75b6ae.gif" alt="Setup process on Ubuntu" width="100%">
@@ -168,7 +168,16 @@ __Note:__ Use `~/.gitconfig.local` to store sensitive information such
 as the `git` user credentials, e.g.:
 
 ```bash
+[commit]
+
+    # Sign commits using GPG.
+    # https://help.github.com/articles/signing-commits-using-gpg/
+
+    gpgsign = true
+
+
 [user]
+
     name = Cătălin Mariș
     email = alrra@example.com
     signingkey = XXXXXXXX

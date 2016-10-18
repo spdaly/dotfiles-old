@@ -241,7 +241,7 @@ main() {
     # and if not, it most likely means that the dotfiles were not
     # yet set up, and they will need to be downloaded.
 
-    printf "%s" "$BASH_SOURCE" | grep "setup.sh" &> /dev/null \
+    printf "%s" "${BASH_SOURCE[0]}" | grep "setup.sh" &> /dev/null \
         || download_dotfiles
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
