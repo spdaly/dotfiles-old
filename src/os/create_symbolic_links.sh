@@ -23,7 +23,6 @@ create_symlinks() {
         "shell/inputrc"
         "shell/liquidprompt"
         "shell/screenrc"
-        "shell/tmux.conf"
 
         "git/gitattributes"
         "git/gitconfig"
