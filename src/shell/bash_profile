@@ -53,5 +53,8 @@ source_bash_files
 [[ $- = *i* ]] && source ~/projects/dotfiles/src/liquidprompt/liquidprompt
 [[ $- = *i* ]] && source ~/projects/dotfiles/src/z/z.sh
 
+PATH="$PATH:$HOME/projects/dotfiles/src/bin"
+
+export PATH
 
 unset -f source_bash_files
