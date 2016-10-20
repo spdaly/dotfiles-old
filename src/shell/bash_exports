@@ -76,3 +76,9 @@ export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # Make Python use UTF-8 encoding for output to stdin/stdout/stderr.
 
 export PYTHONIOENCODING="UTF-8"
+
+# Python virtual environment
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+export PIP_REQUIRE_VIRTUALENV=true

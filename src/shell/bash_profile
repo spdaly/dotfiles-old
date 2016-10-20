@@ -49,8 +49,11 @@ source_bash_files() {
 
 source_bash_files
 
+source /usr/local/bin/virtualenvwrapper.sh
+
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/projects/dotfiles/src/liquidprompt/liquidprompt
+
 [[ $- = *i* ]] && source ~/projects/dotfiles/src/z/z.sh
 
 PATH="$PATH:$HOME/projects/dotfiles/src/bin"
