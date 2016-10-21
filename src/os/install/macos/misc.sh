@@ -9,6 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 install_apps() {
 
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
+    brew_install "Chrome Canary" "google-chrome-canary" "caskroom/versions" "cask"
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
     brew_install "Firefox Developer" "firefoxdeveloperedition" "caskroom/versions" "cask"
     brew_install "Git" "git"
@@ -31,6 +32,7 @@ install_apps() {
     brew_install "Web Font Tools: TTF/OTF → WOFF" "sfnt2woff" "bramstein/webfonttools"
     brew_install "Web Font Tools: WOFF2" "woff2" "bramstein/webfonttools"
     brew_install "Zopfli" "zopfli"
+    brew_install "Flash" "flash-player" "caskroom/cask" "cask"
 
 }
 
