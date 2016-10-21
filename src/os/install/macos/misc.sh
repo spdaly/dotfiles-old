@@ -33,6 +33,7 @@ install_apps() {
     brew_install "Web Font Tools: WOFF2" "woff2" "bramstein/webfonttools"
     brew_install "Zopfli" "zopfli"
     brew_install "Flash" "flash-player" "caskroom/cask" "cask"
+    brew_install "Googler" "googler"
 
 }
 
