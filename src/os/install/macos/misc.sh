@@ -1,13 +1,9 @@
 #!/bin/bash
-
 cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh" \
     && . "./utils.sh"
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 install_apps() {
-
     brew_install "Chrome" "google-chrome" "caskroom/cask" "cask"
     brew_install "Chrome Canary" "google-chrome-canary" "caskroom/versions" "cask"
     brew_install "Firefox" "firefox" "caskroom/cask" "cask"
@@ -34,19 +30,16 @@ install_apps() {
     brew_install "Zopfli" "zopfli"
     brew_install "Flash" "flash-player" "caskroom/cask" "cask"
     brew_install "Googler" "googler"
-
+    brew_install "Dash" "dash" "caskroom/cask" "cask"
+    brew_install "Keycastr" "Keycastr" "caskroom/cask" "cask"
+    brew_install "jq" "jq"
 }
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 main() {
-
     print_in_purple "\n   Miscellaneous\n\n"
-
     install_apps
     printf "\n"
     brew_cleanup
-
 }
 
 main

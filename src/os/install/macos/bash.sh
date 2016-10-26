@@ -1,29 +1,18 @@
 #!/bin/bash
-
 cd "$(dirname "${BASH_SOURCE[0]}")" \
     && . "../../utils.sh" \
     && . "./utils.sh"
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 change_default_bash() {
-
     declare -r LOCAL_SHELL_CONFIG_FILE="$HOME/.bash.local"
-
     local configs=""
     local pathConfig=""
-
     local newShellPath=""
     local brewPrefix=""
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     # Try to get the path of the `Bash`
     # version installed through `Homebrew`.
-
     brewPrefix="$(brew_prefix)" \
         || return 1
-
     pathConfig="PATH=\"$brewPrefix/bin:\$PATH\""
     configs="
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -81,12 +70,10 @@ export PATH
 main() {
 
     print_in_purple "\n   Bash\n\n"
-
     brew_install "Bash" "bash" \
         && change_default_bash
-
+    brew_install "Bash Completion" "bash-completion"
     brew_install "Bash Completion 2" "bash-completion2" "homebrew/versions"
-
 }
 
 main
