@@ -56,7 +56,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 [[ $- = *i* ]] && source ~/projects/dotfiles/src/z/z.sh
 
-PATH="$PATH:$HOME/projects/dotfiles/src/bin"
+PATH="$PATH:$HOME/projects/dotfiles/src/bin:$HOME/.yarn/bin"
 
 export PATH
 
