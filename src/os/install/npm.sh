@@ -46,6 +46,7 @@ main() {
     install_npm_package "Firebase Tools" "firebase-tools"
     install_npm_package "Fabulous Kill" "fkill-cli"
     install_npm_package "Express Generator" "express-generator"
+    install_npm_package "Yarn"  "yarn"
 }
 
 main
