@@ -8,7 +8,8 @@ cd "$(dirname "${BASH_SOURCE[0]}")" \
 print_in_purple "\n   UI & UX\n\n"
 
 execute "defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true" \
-   "Avoid creating '.DS_Store' files on network volumes"
+         defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true" \
+   "Avoid creating '.DS_Store' files on network or USB volumes"
 
 execute "defaults write com.apple.menuextra.battery ShowPercent -string 'NO'" \
     "Hide battery percentage from the menu bar"
