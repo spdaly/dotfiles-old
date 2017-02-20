@@ -788,28 +788,24 @@
 
     followTags = true
 [user]
-
-    # Don't guess the user's identity.
-    # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
-    useConfigOnly = true
-    email = 'steve@thriveplan.com'
-    name = 'Steve Daly'
+  # Don't guess the user's identity.
+  # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+  useConfigOnly = true
+	email = spdaly@gmail.com
+	name = Steve Daly
 [include]
-
     # Load local configs.
     # https://git-scm.com/docs/git-config#_includes
     #
     # [!] The following needs to remain at the end of this file in
     #     order to allow any of the above configs to be overwritten
     #     by the local ones
-
     path = ~/.gitconfig.local
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-
 [diff]
     tool = Kaleidoscope
 [difftool "Kaleidoscope"]

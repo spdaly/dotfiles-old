@@ -1,9 +1,11 @@
 [submodule "src/liquidprompt"]
 	path = src/liquidprompt
 	url = git@github.com:nojhan/liquidprompt.git
-[submodule "src/z"]
-	path = src/z
-	url = git@github.com:rupa/z.git
 [submodule "src/osx-config-check"]
 	path = src/osx-config-check
 	url = git@github.com:kristovatlas/osx-config-check.git
+[submodule "src/vim/vim/plugins/ctrlp.vim"]
+	path = src/vim/vim/plugins/ctrlp.vim
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "src/vim/vim/plugins/delimitmate"]
+	path = src/vim/vim/plugins/delimitmate
