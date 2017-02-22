@@ -54,8 +54,8 @@ source_bash_files
 # source /usr/local/bin/virtualenvwrapper.sh
 
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
-lppath="~/projects/dotfiles/src/liquidprompt/liquidprompt"
-[[ $- = *i* ]] && [[ -s $lppath]] && source $lppath 
+lpath="/Users/spdaly/Projects/dotfiles/src/liquidprompt/liquidprompt"
+[[ $- = *i* ]] && source $lpath
 
 # z beats cd most of the time. `brew install z`
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
